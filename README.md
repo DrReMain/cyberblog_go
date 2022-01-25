@@ -1,2 +1,4 @@
-
-migrate to logrus 
+- [x] ~~consul~~
+- [x] gin 
+- [x] grpc 
+- [ ] migrate to logrus  
