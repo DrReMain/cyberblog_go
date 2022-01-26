@@ -1,4 +1,5 @@
 - [x] ~~consul~~
 - [x] gin 
 - [x] grpc 
-- [ ] migrate to logrus  
+- [x] logrus
+- [x] gorm(mysql)  
