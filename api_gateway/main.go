@@ -3,6 +3,7 @@ package main
 import (
 	"cyberblog_go/api_gateway/user"
 	"github.com/gin-gonic/gin"
+	log "github.com/sirupsen/logrus"
 )
 
 func main() {
@@ -12,5 +13,5 @@ func main() {
 
 	r.POST("/register/passwd", user.RegisterByPasswd)
 
-	panic(e.Run(":3000"))
+	log.Panic(e.Run(":3000"))
 }

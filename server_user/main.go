@@ -4,8 +4,8 @@ import (
 	pb "cyberblog_go/proto/user"
 	"cyberblog_go/server_hello/handler"
 	"fmt"
+	log "github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
-	"log"
 	"net"
 )
 
@@ -22,6 +22,7 @@ func main() {
 
 	svc := grpc.NewServer()
 	pb.RegisterUserServer(svc, &handler.Server{})
+
 	log.Printf("server listening at %v\n", listen.Addr())
 	if err := svc.Serve(listen); err != nil {
 		log.Fatalf("failed to serve: %v\n", err)
